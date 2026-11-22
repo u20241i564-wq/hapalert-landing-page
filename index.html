@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HapAlert | Alertas accesibles</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="diseno.css">
+</head>
+<body>
+  <a class="salto" href="#contenido">Saltar al contenido principal</a>
+  <header class="cabecera">
+    <a class="marca" href="#inicio">HapAlert</a>
+    <span class="subtitulo">Alertas de emergencia accesibles</span>
+    <button id="boton-menu" class="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false">
+      <span aria-hidden="true">☰</span> Menú
+    </button>
+    <div class="cabecera-derecha">
+      <button class="enlace-superior" data-action="ayuda" aria-label="Abrir ayuda"><span class="icono-ayuda">?</span> Ayuda</button>
+      <button class="enlace-superior" data-action="cuenta" aria-label="Abrir mi cuenta"><span class="icono-usuario">&#128100;</span> Mi cuenta</button>
+    </div>
+  </header>
+  <div class="estructura">
+    <nav id="menu-principal" class="lateral" aria-label="Menú principal">
+      <p class="menu-titulo">MI ESPACIO</p>
+      <a href="#inicio" data-menu="inicio">Inicio</a>
+      <a href="#alertas" data-menu="alertas">Alertas</a>
+      <a href="#orientacion" data-menu="orientacion">Orientación</a>
+      <a href="#configuracion" data-menu="configuracion">Configuración</a>
+      <a href="#historial" data-menu="historial">Historial</a>
+      <a href="#gestion" data-menu="gestion">Gestión de emergencias</a>
+      <a href="#contactos" data-menu="contactos">Contactos de confianza</a>
+      <div class="estado-lateral"><strong>Modo demostración</strong><span>Campus Central (ficticio)</span><small>Sin conexión a emergencias reales</small></div>
+    </nav>
+    <main id="contenido" tabindex="-1" aria-live="polite"></main>
+  </div>
+  <div id="aviso" class="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="dialogo"><div id="dialogo-contenido"></div><form method="dialog"><button class="boton secundario" aria-label="Cerrar ventana">Cerrar</button></form></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
