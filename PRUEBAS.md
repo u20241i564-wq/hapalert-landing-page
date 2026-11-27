@@ -61,3 +61,29 @@ Nota: En HU-16 todas las alertas son simulacros; en HU-28 la vibración es repre
 - [ ] Al seleccionar una sección móvil, el menú se cierra.
 - [ ] Al presionar Escape, el menú se cierra y el foco regresa al botón.
 - [ ] Al volver a escritorio, el menú lateral permanece visible.
+
+## Comprobaciones adicionales de versión 2.0 (pendientes de ejecución en navegador)
+1. Inicio: verificar accesos directos y aviso resumido, elegir cada perfil y revisar persistencia tras recarga.
+2. HU-28: reproducir ambos patrones y verificar representación visual y texto.
+3. HU-20: verificar plano ilustrativo y aviso de ruta bloqueada.
+4. HU-36: buscar un evento y filtrar por estado; comprobar ausencia de resultados cuando corresponda.
+5. Contactos: agregar y eliminar un alias ficticio; comprobar persistencia local.
+6. HU-41 a HU-46: comprobar progreso, validaciones y publicación local; revisar HU-47 y HU-48.
+7. Revisar inicio y navegación en escritorio y móvil, teclado, contraste y texto grande.
+
+## Pruebas adicionales 2.3 (pendientes de ejecución en dispositivo)
+- Abrir HU-01 a HU-50 desde sus módulos y comprobar controles.
+- Iniciar simulacro, detener vibración, reactivarla, confirmar lectura; verificar que detener no cierre el aviso.
+- Probar patrones en Android compatible y en navegador sin API; comprobar alternativa visual y reducción de movimiento.
+- Comprobar plano principal/alternativo y avance de posición simulada.
+- Comprobar duración, señal visual, diagnóstico, sectores, consentimiento y contactos locales.
+- Comprobar menú inferior, contraste, modo oscuro, entrenamiento y caché offline después de primera visita HTTPS.
+- No registrar cumplimiento real de HU dependientes de hardware, permisos del SO, servidor o dispositivos externos.
+
+## Regresión 2.4 (pendiente de ejecución en dispositivos)
+- Abrir las 50 rutas HU y las cuatro rutas nuevas.
+- Iniciar cada escenario, verificar tipo, instrucciones, detener vibración sin cerrar alerta, confirmar lectura.
+- Cambiar ruta bloqueada, avanzar plano y confirmar llegada; verificar que la alerta no finaliza.
+- Completar cinco ejercicios hápticos y comprobar retroalimentación.
+- Cambiar preferencias, recargar, comprobar persistencia, teclado y movimiento reducido.
+- Probar historial, sectores, contactos, vista móvil, Android compatible y caché sin conexión.

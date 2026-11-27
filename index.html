@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HapAlert | Alertas accesibles</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="diseno.css">
-</head>
+  
+  
+<link rel="manifest" href="manifest.json"></head>
 <body>
   <a class="salto" href="#contenido">Saltar al contenido principal</a>
   <header class="cabecera">
@@ -15,7 +16,7 @@
     <button id="boton-menu" class="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false">
       <span aria-hidden="true">☰</span> Menú
     </button>
-    <div class="cabecera-derecha">
+    <div class="cabecera-derecha"><button class="enlace-superior" data-dark23>Modo oscuro</button>
       <button class="enlace-superior" data-action="ayuda" aria-label="Abrir ayuda"><span class="icono-ayuda">?</span> Ayuda</button>
       <button class="enlace-superior" data-action="cuenta" aria-label="Abrir mi cuenta"><span class="icono-usuario">&#128100;</span> Mi cuenta</button>
     </div>
@@ -30,12 +31,15 @@
       <a href="#historial" data-menu="historial">Historial</a>
       <a href="#gestion" data-menu="gestion">Gestión de emergencias</a>
       <a href="#contactos" data-menu="contactos">Contactos de confianza</a>
-      <div class="estado-lateral"><strong>Modo demostración</strong><span>Campus Central (ficticio)</span><small>Sin conexión a emergencias reales</small></div>
+      <a href="#familia" data-menu="familia">Familiares y cuidadores</a><a href="#entrenamiento">Entrenamiento</a><a href="#simulacion">Centro de simulación</a><a href="#aprendizaje">Aprender señales</a><a href="#accesibilidad">Accesibilidad</a><div class="estado-lateral"><strong>Modo demostración</strong><span>Campus Central (ficticio)</span><small>Sin conexión a emergencias reales</small></div>
     </nav>
     <main id="contenido" tabindex="-1" aria-live="polite"></main>
   </div>
   <div id="aviso" class="toast" role="status" aria-live="polite" hidden></div>
   <dialog id="dialogo"><div id="dialogo-contenido"></div><form method="dialog"><button class="boton secundario" aria-label="Cerrar ventana">Cerrar</button></form></dialog>
+  
+  
+<dialog id="alert23" aria-label="Alerta simulada"></dialog><nav class="bottom23" aria-label="Navegación rápida"><a data-bottom23 href="#inicio">⌂<span>Inicio</span></a><a data-bottom23 href="#hu-01">⚠<span>Alertas</span></a><a data-bottom23 href="#hu-20">↗<span>Evacuar</span></a><a data-bottom23 href="#hu-27">≋<span>Señales</span></a><a data-bottom23 href="#configuracion">⚙<span>Ajustes</span></a></nav>
   <script src="app.js"></script>
 </body>
 </html>

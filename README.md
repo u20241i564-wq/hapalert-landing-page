@@ -36,7 +36,7 @@
 ## Archivos
 - `index.html`: estructura principal única (landing page).
 - `style.css`: estructura visual base.
-- `diseno.css`: apariencia, adaptación responsive y estados visuales de accesibilidad.
+- `style.css` incluye también apariencia, adaptación responsive y estados de accesibilidad.
 - `app.js`: navegación, DOM, eventos, formularios, validaciones, menú móvil, estados y almacenamiento local.
 - `PRUEBAS.md`: checklist de las 30 HU.
 
@@ -57,7 +57,7 @@ La portada no incluye accesos por código HU. Entra en **Inicio → Alertas → 
 Esta versión incluye aviso evidente de **SIMULACRO**; no debe utilizarse para emergencias reales. Se mejoró la navegación por teclado y el foco después de cada cambio de pantalla.
 
 ## Nueva apariencia visual (versión mejorada)
-El diseño renovado se encuentra en `diseno.css`, que se carga después de `style.css`. Se actualizaron las 30 vistas sin cambiar la programación de `app.js` ni los enlaces existentes. Para editar los colores y tarjetas, comience en `diseno.css`.
+Los estilos se encuentran consolidados en `style.css`, en secciones ordenadas según su precedencia original.
 
 Los avisos son únicamente simulaciones académicas; no enviar información sensible ni usarlo como servicio real de emergencias.
 
@@ -69,3 +69,23 @@ Inicio incluye imágenes locales, video MP4 explicativo accesible con controles 
 ## JavaScript implementado
 
 El proyecto usa JavaScript en `app.js`; no requiere Java. La programación implementa las 30 rutas internas, navegación mediante hash, gestión de eventos, validación de formularios, persistencia con `localStorage`, actualización de alertas, cambio de tamaño de texto, alto contraste, mensajes `aria-live` y menú móvil accesible. El botón móvil controla `#menu-principal` con `aria-controls` y `aria-expanded`, se cierra al seleccionar una sección y responde a Escape.
+
+## Versión 2.0 — mejoras UX/UI
+- Panel inicial con aviso resumido y accesos directos; recursos educativos originales en sección desplegable.
+- Selección de cuatro perfiles de demostración; el perfil de seguridad prioriza la gestión. No es autenticación ni autorización.
+- Comparador visual animado de los dos patrones existentes (sin vibración física), plano ilustrativo, filtro de historial por texto y estado, contactos ficticios con alta y eliminación local, progreso de creación de avisos.
+- Se mantienen las 30 rutas HU originales. Las extensiones históricas están integradas en `style.css` y `app.js`.
+- Abrir `index.html` o publicar todo el contenido de esta carpeta en GitHub Pages.
+- Verificación realizada: sintaxis de ambos JS y presencia de 30 casos HU únicos. El entorno de prueba bloqueó la navegación de Chromium; falta comprobar la ejecución interactiva y la adaptación móvil en un navegador real. No registrar estos controles como aceptación definitiva.
+- Solo demostración académica: no envía mensajes ni alertas reales, no genera vibración física y no ofrece mapas reales. Usar únicamente información ficticia.
+
+## Versión 2.3
+Incluye rutas HU-01 a HU-50 (el informe contiene 50 identificadores, aunque el handbook solicita 48). Las 30 core originales se conservan. Las HU adicionales representan funciones locales o simulaciones, no cumplimiento certificado. HU-07/08/10 y 50 no proporcionan entrega real a dispositivos bloqueados, activación de pantalla, smartwatch ni contactos. HU-26 ajusta duración, no potencia. Las alertas son ficticias. La vibración depende de dispositivo, interacción y navegador; no funciona de forma garantizada en segundo plano. El botón Detener vibración es independiente de Confirmar lectura. PWA: caché inicial bajo HTTPS, sin garantía de instalación en todos los navegadores. Planos ficticios, no aptos para evacuación real.
+
+## Versión 2.4
+Nuevas rutas: #simulacion, #aprendizaje, #accesibilidad y #tutorial. Incluye ilustraciones SVG originales, confirmación ficticia de llegada, preferencias persistentes, línea de tiempo y tablero con conteos locales. El centro de simulación cierra el aviso previo al iniciar otro escenario. Los recursos oficiales preexistentes incluyen enlaces educativos; no se han creado traducciones propias en LSP. Vibración física condicionada al navegador; los ajustes cambian duración, no potencia. No utilizar en emergencias reales.
+
+## Distribución 2.4 Final
+Un único archivo JS y un único CSS conservan el orden de ejecución y la cascada de la versión 2.4. Se mantiene el manifest, service worker, recursos y documentación. La consolidación no implica aprobación de criterios de aceptación. Publicar el contenido de la raíz completo y verificar el despliegue.
+
+Comprobación de consolidación: sintaxis JS válida, bloques originales preservados en orden, recursos idénticos y referencias de caché existentes. Navegación de Chromium bloqueada por política del entorno; pruebas funcionales pendientes.
