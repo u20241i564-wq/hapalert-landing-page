@@ -295,3 +295,16 @@ dialog .campo input { width:100%; }
 /* ===== Experiencia y accesibilidad ===== */
 .grid24{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px;margin:16px 0}.tile24{border:1px solid #b9d1e1;border-radius:18px;padding:18px;background:#f7fbfe;color:#163b57}.tile24 h3{margin:10px 0}.icon24{display:grid;place-items:center;width:64px;height:64px;border-radius:16px;background:#dcebf7;font-size:38px;font-weight:bold}.check24{display:flex;gap:10px;align-items:center;padding:10px 0}.preview24{padding:16px;border-left:5px solid #b82e35;background:#fff0ef;color:#80232a;border-radius:8px}.wave24{display:flex;align-items:center;gap:5px;min-height:60px}.wave24 i{background:#1769a6;border-radius:5px}.stepart24{display:flex;align-items:center;gap:22px;padding:20px;border:1px solid #b9d1e1;border-radius:20px;background:#f4f9fc;color:#153b57}.illustration24{width:min(42%,240px);height:auto}.sector24,.timeline24{padding:14px;border-bottom:1px solid #b9d1e1}.sector24{display:flex;justify-content:space-between;gap:12px}.timeline24{border-left:4px solid #2875ad;margin:12px 0}.lock24,.watch24{padding:15px;border:5px solid #344b60;border-radius:25px;max-width:300px;margin:12px auto;text-align:center}.watch24{max-width:230px;border-radius:42px}.watch24 .phone23,.lock24 .phone23{max-width:100%;margin:8px auto}.no-motion24 *, .no-motion24 *::before,.no-motion24 *::after{animation:none!important;transition:none!important}.no-pict24 .icon24,.no-pict24 .illustration24,.no-pict24 .evac2-icono,.no-pict24 .evac2-badge{display:none}.simple24 .educacion2,.simple24 .evac2-ayuda ul{display:none}#contenido{font-size:var(--font24,18px)}#contenido .boton{min-height:44px;white-space:normal}#contenido p,#contenido li{overflow-wrap:anywhere}.alto-contraste .tile24,.alto-contraste .stepart24,.dark23 .tile24,.dark23 .stepart24{background:#132536;color:#fff;border-color:#8399aa}.alto-contraste .tile24,.alto-contraste .stepart24{background:#000;border-color:#fff}.dark23 .icon24,.alto-contraste .icon24{background:#334c63;color:#fff}@media(max-width:600px){.stepart24{flex-direction:column;align-items:stretch}.illustration24{width:100%;max-height:180px}.grid24{gap:10px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
+
+/* Indicadores de navegación 2.5: iconos y estado actual. */
+#menu-principal a[data-menu]{display:flex;align-items:center;gap:10px;padding-right:23px;min-height:44px;line-height:1.35;}
+#menu-principal a[data-menu]::before{content:none;display:none;}
+#menu-principal .menu-icono{width:21px;height:21px;flex:0 0 21px;color:#bedcf1;}
+#menu-principal a.activo .menu-icono{color:inherit;}
+#menu-principal a.activo::after{content:'';position:absolute;right:8px;top:10px;bottom:10px;width:3px;border-radius:3px;background:currentColor;}
+.alto-contraste #menu-principal .menu-icono{color:inherit;}
+.bottom23 a[aria-current]{font-weight:700;box-shadow:inset 0 -3px currentColor;}
+.alto-contraste .bottom23 a[aria-current]{background:#ff0;color:#000;}
+.dark23:not(.alto-contraste) .bottom23{background:#23394e;border-color:#587087;}
+.dark23:not(.alto-contraste) .bottom23 a{color:#edf5ff;}
+.dark23:not(.alto-contraste) .bottom23 a[aria-current]{background:#365875;}

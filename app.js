@@ -559,3 +559,25 @@ document.addEventListener('click',e=>{let b=e.target.closest('button');if(!b)ret
 document.addEventListener('change',e=>{let x=e.target;if(x.dataset.pref24){prefs24()[x.dataset.pref24]=x.checked;if(!prefs24().motion)halt23();guardar();mostrar();}if(x.id==='vib24'){pref().habilitada=x.checked;if(!x.checked)halt23();guardar();}if(x.id==='font24'){prefs24().font=Number(x.value);guardar();}});document.addEventListener('input',e=>{if(e.target.id==='font24'){document.documentElement.style.setProperty('--font24',e.target.value+'px');document.getElementById('size24').textContent=e.target.value;}});
 window.addEventListener('DOMContentLoaded',mostrar);
 
+
+/* Sincroniza todos los indicadores, también en las vistas añadidas en 2.4. */
+function sincronizarMenu25(){
+ const ruta=location.hash.slice(1)||'inicio';
+ const hu=ruta.startsWith('hu-')?ruta.slice(3):null;
+ const grupo=hu?grupoPorHu(hu)?.id:ruta==='tutorial'?'inicio':ruta;
+ document.querySelectorAll('#menu-principal [data-menu]').forEach(a=>{
+  const activo=a.dataset.menu===grupo;
+  a.classList.toggle('activo',activo);
+  if(activo)a.setAttribute('aria-current',a.hash==='#'+ruta?'page':'location');else a.removeAttribute('aria-current');
+ });
+ const rapido=ruta==='aprendizaje'||['27','28'].includes(hu)?'#hu-27':grupo==='inicio'?'#inicio':grupo==='alertas'?'#hu-01':grupo==='orientacion'?'#hu-20':['configuracion','accesibilidad'].includes(grupo)?'#configuracion':null;
+ document.querySelectorAll('[data-bottom23]').forEach(a=>{
+  const activo=a.hash===rapido;
+  a.classList.toggle('active23',activo);
+  if(activo)a.setAttribute('aria-current',a.hash==='#'+ruta?'page':'location');else a.removeAttribute('aria-current');
+ });
+}
+const mostrarAntes25=mostrar;
+mostrar=function(){mostrarAntes25();sincronizarMenu25();};
+window.addEventListener('DOMContentLoaded',sincronizarMenu25);
+window.addEventListener('hashchange',sincronizarMenu25);
